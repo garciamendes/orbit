@@ -1,6 +1,9 @@
 import fastify from "fastify";
+import { routerGoals } from "./controllers/goals/routes";
 
 const app = fastify();
+
+app.register(routerGoals, { prefix: "/api/goals" });
 
 app
 	.listen({

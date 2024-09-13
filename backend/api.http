@@ -1,0 +1,21 @@
+@baseUrl = http://0.0.0.0:3333
+
+### Create Goal
+POST {{baseUrl}}/api/goals
+Content-Type: application/json
+
+{
+  "title": "Teste 03",
+  "desiredWeeklyFrequency": 5
+}
+
+### Get Goals
+GET {{baseUrl}}/api/goals
+
+### POST Goal Completion
+POST {{baseUrl}}/api/goals/completion
+Content-Type: application/json
+
+{
+  "goalId": "hny0xim571eiw1pc63nksd72"
+}
