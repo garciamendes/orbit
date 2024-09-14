@@ -19,3 +19,6 @@ Content-Type: application/json
 {
   "goalId": "hny0xim571eiw1pc63nksd72"
 }
+
+### Get Goals Summary
+GET {{baseUrl}}/api/goals/summary

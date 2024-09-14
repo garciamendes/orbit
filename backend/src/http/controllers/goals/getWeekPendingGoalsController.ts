@@ -7,8 +7,8 @@ export const getWeekPendingGoalsController = async (
 ) => {
 	try {
 		const { pendingGoals } = await getWeekPendingGoals();
-		reply.status(200).send(pendingGoals);
+		return reply.status(200).send(pendingGoals);
 	} catch (error) {
-		reply.status(500).send({ error });
+		return reply.status(500).send({ error });
 	}
 };
