@@ -8,6 +8,10 @@ export const createGoalCompletionController = async (
 ) => {
 	const { goalId } = createGoalCompletionSchema.parse(request.body);
 
-	await createGoalCompletion({ goalId });
-	return reply.status(201).send();
+	try {
+		const { goalCompletion } = await createGoalCompletion({ goalId });
+		return reply.status(201).send(goalCompletion);
+	} catch (error) {
+		return reply.status(500).send(error);
+	}
 };

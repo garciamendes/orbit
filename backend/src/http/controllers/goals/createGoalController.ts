@@ -10,6 +10,10 @@ export const createGoalController = async (
 		request.body,
 	);
 
-	await createGoal({ title, desiredWeeklyFrequency });
-	return reply.status(201).send();
+	try {
+		const { goal } = await createGoal({ title, desiredWeeklyFrequency });
+		return reply.status(201).send(goal);
+	} catch (error) {
+		return reply.status(500).send(error);
+	}
 };

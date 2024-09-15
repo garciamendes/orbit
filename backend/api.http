@@ -5,12 +5,12 @@ POST {{baseUrl}}/api/goals
 Content-Type: application/json
 
 {
-  "title": "Teste 03",
-  "desiredWeeklyFrequency": 5
+  "title": "Teste 05",
+  "desiredWeeklyFrequency": 2
 }
 
-### Get Goals
-GET {{baseUrl}}/api/goals
+### Get Goals Pending
+GET {{baseUrl}}/api/goals/pendings
 
 ### POST Goal Completion
 POST {{baseUrl}}/api/goals/completion

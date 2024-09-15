@@ -6,7 +6,7 @@ import { getWeekSummaryController } from "./getWeekSummary";
 
 export const routerGoals = async (app: FastifyInstance) => {
 	app.post("/", createGoalController);
-	app.get("/", getWeekPendingGoalsController);
+	app.get("/pendings", getWeekPendingGoalsController);
 	app.get("/summary", getWeekSummaryController);
 	app.post("/completion", createGoalCompletionController);
 };
